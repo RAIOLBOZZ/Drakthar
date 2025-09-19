@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://drakthar.site/sitemap.xml
+
+# Crawl-delay (opcional)
+Crawl-delay: 1
+
+# Disallow specific paths (se necessário)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /api/
+
+# Allow specific paths
+Allow: /logo.svg
+Allow: /favicon.svg
+Allow: /manifest.json
+Allow: /styles.css
+Allow: /script.js
+
+# Host (opcional)
+Host: https://drakthar.site

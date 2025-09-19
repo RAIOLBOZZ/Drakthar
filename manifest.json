@@ -1,0 +1,100 @@
+{
+  "name": "DRAKTHAR - Jogo NFT de Dragões",
+  "short_name": "DRAKTHAR",
+  "description": "O universo dos dragões NFT está aqui! Incube ovos, crie dragões únicos, explore mundos e negocie no marketplace mais dinâmico do universo blockchain.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#ff6b35",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": ["games", "entertainment", "nft", "blockchain"],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo.svg",
+      "sizes": "800x200",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "logo.svg",
+      "sizes": "800x200",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "DRAKTHAR - Tela principal do jogo"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Incubadora",
+      "short_name": "Incubadora",
+      "description": "Acesse a incubadora de ovos",
+      "url": "/#incubator",
+      "icons": [
+        {
+          "src": "favicon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Mercado",
+      "short_name": "Mercado",
+      "description": "Acesse o marketplace",
+      "url": "/#marketplace",
+      "icons": [
+        {
+          "src": "favicon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Breeding",
+      "short_name": "Breeding",
+      "description": "Acesse o sistema de breeding",
+      "url": "/#breeding",
+      "icons": [
+        {
+          "src": "favicon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Expedições",
+      "short_name": "Expedições",
+      "description": "Acesse as expedições",
+      "url": "/#expeditions",
+      "icons": [
+        {
+          "src": "favicon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  }
+}
+

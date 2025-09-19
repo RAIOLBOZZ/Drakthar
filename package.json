@@ -1,0 +1,41 @@
+{
+  "name": "drakthar-nft-game",
+  "version": "1.0.0",
+  "description": "DRAKTHAR - Jogo NFT completo baseado em dragões com sistema de breeding, incubação e marketplace",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 3000 -o",
+    "dev": "npx live-server --port=3000 --open=/index.html",
+    "build": "echo 'Build completed - static files ready'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "nft",
+    "game",
+    "dragons",
+    "blockchain",
+    "breeding",
+    "marketplace",
+    "web3",
+    "javascript",
+    "html5",
+    "css3"
+  ],
+  "author": "DRAKTHAR Team",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drakthar/nft-dragon-game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/drakthar/nft-dragon-game/issues"
+  },
+  "homepage": "https://github.com/drakthar/nft-dragon-game#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRAKTHAR - Jogo NFT de Dragões</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="logo.svg" alt="DRAKTHAR" class="logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#gameplay" class="nav-link">Como Jogar</a></li>
+                <li><a href="#marketplace" class="nav-link">Mercado</a></li>
+                <li><a href="#incubator" class="nav-link">Incubadora</a></li>
+                <li><a href="#breeding" class="nav-link">Breeding</a></li>
+                <li><a href="#expeditions" class="nav-link">Expedições</a></li>
+                <li><a href="#profile" class="nav-link">Perfil</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-logo">
+                        <img src="logo.svg" alt="DRAKTHAR" class="hero-logo-img">
+                    </div>
+                    <p class="hero-subtitle">O Universo dos Dragões NFT</p>
+                    <p class="hero-description">
+                        Incube ovos, crie dragões únicos através do breeding, explore mundos distantes 
+                        e negocie no mercado mais dinâmico do universo blockchain.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showSection('incubator')">
+                            <i class="fas fa-egg"></i> Comprar Ovos
+                        </button>
+                        <button class="btn btn-secondary" onclick="showSection('marketplace')">
+                            <i class="fas fa-store"></i> Entrar no Mercado
+                        </button>
+                        <button class="btn btn-outline" onclick="showSection('gameplay')">
+                            <i class="fas fa-play"></i> Como Jogar
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="dragon-animation">
+                        <div class="dragon-egg"></div>
+                        <div class="dragon-hatching"></div>
+                        <div class="dragon-adult"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gameplay Section -->
+        <section id="gameplay" class="section hidden">
+            <div class="container">
+                <h2 class="section-title">Como Jogar DRAKTHAR</h2>
+                <div class="gameplay-grid">
+                    <div class="gameplay-card">
+                        <div class="card-icon">
+                            <i class="fas fa-egg"></i>
+                        </div>
+                        <h3>Incubação de Ovos</h3>
+                        <p>Compre ovos NFT e coloque-os na incubadora. Use moedas especiais para acelerar o processo e descubra dragões únicos.</p>
+                    </div>
+                    <div class="gameplay-card">
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Breeding</h3>
+                        <p>Combine dois dragões para criar descendentes com características mistas. A genética dos pais determina a raridade do novo dragão.</p>
+                    </div>
+                    <div class="gameplay-card">
+                        <div class="card-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h3>Expedições</h3>
+                        <p>Envie seus dragões adultos em expedições para coletar recursos valiosos e gerar renda passiva.</p>
+                    </div>
+                    <div class="gameplay-card">
+                        <div class="card-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3>Mercado</h3>
+                        <p>Negocie dragões, ovos e DNAs no marketplace dinâmico. O valor é determinado pela oferta e demanda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marketplace Section -->
+        <section id="marketplace" class="section hidden">
+            <div class="container">
+                <h2 class="section-title">Mercado DRAKTHAR</h2>
+                <div class="marketplace-controls">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Buscar dragões, ovos ou DNAs..." id="marketplace-search">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="filters">
+                        <select id="rarity-filter">
+                            <option value="">Todas as Raridades</option>
+                            <option value="common">Comum</option>
+                            <option value="rare">Raro</option>
+                            <option value="epic">Épico</option>
+                            <option value="legendary">Lendário</option>
+                            <option value="mythic">Mítico</option>
+                        </select>
+                        <select id="type-filter">
+                            <option value="">Todos os Tipos</option>
+                            <option value="egg">Ovos</option>
+                            <option value="dragon">Dragões</option>
+                            <option value="dna">DNAs</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="marketplace-grid" id="marketplace-items">
+                    <!-- Items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Incubator Section -->
+        <section id="incubator" class="section hidden">
+            <div class="container">
+                <h2 class="section-title">Incubadora</h2>
+                <div class="incubator-content">
+                    <div class="incubator-slots">
+                        <div class="incubator-slot" data-slot="1">
+                            <div class="slot-content">
+                                <i class="fas fa-plus"></i>
+                                <p>Slot Vazio</p>
+                            </div>
+                        </div>
+                        <div class="incubator-slot" data-slot="2">
+                            <div class="slot-content">
+                                <i class="fas fa-plus"></i>
+                                <p>Slot Vazio</p>
+                            </div>
+                        </div>
+                        <div class="incubator-slot" data-slot="3">
+                            <div class="slot-content">
+                                <i class="fas fa-plus"></i>
+                                <p>Slot Vazio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="incubator-controls">
+                        <div class="currency-display">
+                            <span class="currency-icon">💰</span>
+                            <span id="incubation-currency">1000</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="openEggShop()">
+                            <i class="fas fa-shopping-cart"></i> Comprar Ovos
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Breeding Section -->
+        <section id="breeding" class="section hidden">
+            <div class="container">
+                <h2 class="section-title">Breeding</h2>
+                <div class="breeding-content">
+                    <div class="breeding-machine">
+                        <div class="parent-slot" id="parent-1">
+                            <div class="slot-content">
+                                <i class="fas fa-plus"></i>
+                                <p>Selecionar Dragão Pai</p>
+                            </div>
+                        </div>
+                        <div class="breeding-symbol">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="parent-slot" id="parent-2">
+                            <div class="slot-content">
+                                <i class="fas fa-plus"></i>
+                                <p>Selecionar Dragão Mãe</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="breeding-result">
+                        <div class="result-slot">
+                            <div class="slot-content">
+                                <i class="fas fa-question"></i>
+                                <p>Resultado do Breeding</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="breeding-controls">
+                        <button class="btn btn-primary" onclick="startBreeding()" disabled id="breeding-btn">
+                            <i class="fas fa-magic"></i> Iniciar Breeding
+                        </button>
+                        <div class="breeding-cost">
+                            <span>Custo: 500 💰</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expeditions Section -->
+        <section id="expeditions" class="section hidden">
+            <div class="container">
+                <h2 class="section-title">Expedições</h2>
+                <div class="expeditions-content">
+                    <div class="expedition-list">
+                        <div class="expedition-card" data-expedition="forest">
+                            <div class="expedition-icon">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <h3>Floresta Mística</h3>
+                            <p>Recursos: Madeira, Cristais</p>
+                            <p>Duração: 2 horas</p>
+                            <p>Recompensa: 100-200 💰</p>
+                            <button class="btn btn-outline" onclick="startExpedition('forest')">
+                                Iniciar Expedição
+                            </button>
+                        </div>
+                        <div class="expedition-card" data-expedition="mountain">
+                            <div class="expedition-icon">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                            <h3>Montanhas Geladas</h3>
+                            <p>Recursos: Pedras Preciosas, Gelo</p>
+                            <p>Duração: 4 horas</p>
+                            <p>Recompensa: 200-400 💰</p>
+                            <button class="btn btn-outline" onclick="startExpedition('mountain')">
+                                Iniciar Expedição
+                            </button>
+                        </div>
+                        <div class="expedition-card" data-expedition="volcano">
+                            <div class="expedition-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h3>Vulcão Ardente</h3>
+                            <p>Recursos: Magma, Gemas</p>
+                            <p>Duração: 6 horas</p>
+                            <p>Recompensa: 400-800 💰</p>
+                            <button class="btn btn-outline" onclick="startExpedition('volcano')">
+                                Iniciar Expedição
+                            </button>
+                        </div>
+                    </div>
+                    <div class="active-expeditions">
+                        <h3>Expedições Ativas</h3>
+                        <div id="active-expeditions-list">
+                            <!-- Active expeditions will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="section hidden">
+            <div class="container">
+                <h2 class="section-title">Meu Perfil</h2>
+                <div class="profile-content">
+                    <div class="profile-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-dragon"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-dragons">0</h3>
+                                <p>Dragões</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-egg"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-eggs">0</h3>
+                                <p>Ovos</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-currency">1000</h3>
+                                <p>Moedas</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-expeditions">0</h3>
+                                <p>Expedições</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-tabs">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" onclick="showTab('dragons')">Dragões</button>
+                            <button class="tab-btn" onclick="showTab('eggs')">Ovos</button>
+                            <button class="tab-btn" onclick="showTab('inventory')">Inventário</button>
+                        </div>
+                        <div class="tab-content">
+                            <div id="dragons-tab" class="tab-panel active">
+                                <div class="dragons-grid" id="user-dragons">
+                                    <!-- User dragons will be populated by JavaScript -->
+                                </div>
+                            </div>
+                            <div id="eggs-tab" class="tab-panel">
+                                <div class="eggs-grid" id="user-eggs">
+                                    <!-- User eggs will be populated by JavaScript -->
+                                </div>
+                            </div>
+                            <div id="inventory-tab" class="tab-panel">
+                                <div class="inventory-grid" id="user-inventory">
+                                    <!-- User inventory will be populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <div id="egg-shop-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Loja de Ovos</h3>
+                <button class="close-btn" onclick="closeModal('egg-shop-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="egg-shop-grid" id="egg-shop-items">
+                    <!-- Egg shop items will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dragon-select-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Selecionar Dragão</h3>
+                <button class="close-btn" onclick="closeModal('dragon-select-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="dragon-select-grid" id="dragon-select-items">
+                    <!-- Dragon selection items will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
